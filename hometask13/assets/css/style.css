@@ -1,0 +1,496 @@
+
+html {
+    font-size: 12px;
+}
+
+.page {
+    width: clamp(300px, 100vw, 576px);
+}
+
+.header-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.tradename {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-links > a {
+    flex-grow: 1;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ab3a32;
+}
+
+.cat-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.cat-navigation > a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    flex-grow: 1;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: grey;
+}
+
+.main-image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.dog-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    padding-bottom: 3rem;
+    padding-top: 0.4rem;
+    text-align: center;
+    margin-top: 0.4rem;
+    grid-template-rows: 4rem;
+
+}
+
+.dog-categories > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: bottom;
+    
+}
+
+.toys {
+    background: url(../img/paw-prints.png);
+}
+
+.food {
+    background-image: url(../img/paw-prints.png);
+}
+
+.clothes {
+    background-image: url(../img/paw-prints.png);
+}
+
+.dog-categories > div > a {
+    text-decoration: none;
+    color: #0a6e41;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.dog-categories > div > p {
+    display: none;
+}
+
+.goods-card {
+    display: grid;
+    height: 19rem;
+    margin-bottom: 1rem;
+    border: white;
+    box-shadow: 2px 2px 5px grey;
+    justify-content: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr 2fr auto;
+    grid-template-areas: 'card-image card-title'
+                         'card-image card-text'
+                         'card-image card-button';
+}
+
+.card-image {
+    grid-area: card-image;
+    width: 14rem;
+    height: 19rem;
+    object-fit: cover;
+}
+
+.card-title {
+    grid-area: card-title;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #8a0c1f;
+    text-align: center;
+}
+
+.card-text {
+    grid-area: card-text;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-buy-button {
+    display: flex;
+    grid-area: card-button;
+    justify-content: center;
+}
+
+.card-buy-button > a {
+    margin-bottom: 2.9rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 20fr 1fr 20fr;
+    gap: 40px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "main main main"
+                         "info . cust"
+                         "extr . acc";
+}
+
+
+.main-contact {
+    grid-area: main;
+}
+
+.information {
+    grid-area: info;
+}
+
+.customer-service {
+    grid-area: cust;
+}
+
+.extras {
+    grid-area: extr;
+}
+
+.account {
+    grid-area: acc;
+}
+
+@media (min-width: 768px) {
+    .page {
+        width: clamp(768px, 100vw, 991px);
+    }
+
+    .categories {
+        margin: 1rem;
+    }
+    
+    .tradename {
+        font-size: 3rem;
+    }
+    
+    .header-links > a {
+        font-size: 1.8rem;
+    }
+    
+    .cat-navigation > a {
+        font-size: 2rem;
+    }
+    
+    .dog-categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        padding-bottom: 3rem;
+        padding-top: 0.4rem;
+        text-align: center;
+        grid-template-rows: 4rem;
+    }
+    
+    .dog-categories > div {
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+        margin-bottom: 2rem;
+        justify-content: flex-end;
+        align-content: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;   
+    }
+    
+    .toys {
+        background: url(../img/background-toys.jpg);
+    }
+    
+    .food {
+        background-image: url(../img/background-food.jpg);
+    }
+    
+    .clothes {
+        background-image: url(../img/background-clothes.jpg);
+    }
+    
+    .dog-categories > div > a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    div.food > a {
+        color: black;
+    }
+    
+    .dog-categories > div > p {
+        display: none;
+    }
+
+    .featured-goods {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        grid-template-rows: auto;
+    }
+
+    .goods-card {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 50rem;
+    }
+
+    .card-image {
+        align-content: flex-end;
+        grid-area: unset;
+        width: 100%;
+        height: 40rem;
+        object-fit: cover;
+        overflow: hidden;
+
+    }
+    
+    .card-title {
+        grid-area: card-title;
+        font-size: 2rem;
+        padding: 1rem;
+        color: #8a0c1f;
+        text-align: center;
+    }
+    
+    .card-text {
+        grid-area: card-text;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .card-buy-button {
+        display: flex;
+        grid-area: card-button;
+        justify-content: center;
+    }
+    
+    .card-buy-button > a {
+        margin-bottom: 2.9rem;
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: 20fr 1fr 20fr;
+        gap: 40px;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "main main main"
+                             "info . cust"
+                             "extr . acc";
+    }
+}
+
+@media (min-width: 992px) {
+    .page {
+        width: clamp(992px, 70vw, 1200px);
+    }
+    
+    .tradename {
+        margin-left: 1rem;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    
+    .header-links > a {
+        margin-left: 1rem;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: darkgrey;
+    }
+
+    .header-links > a:hover {
+        color: #149940;
+    }
+    
+    .cat-navigation > a {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+
+    .cat-navigation > a:hover {
+        color: #990c1f;
+    }
+    
+    .main-image {
+        width: 100%;
+        height: 27rem;
+        object-fit: cover;
+    }
+
+    .dog-categories > div {
+        margin-bottom: 1rem;
+    }
+    
+    .dog-categories {
+        padding-bottom: 0rem;
+        padding-top: 0.4rem;
+        text-align: center;
+        margin-top: 0.4rem;
+        margin-bottom: 0rem;
+        grid-template-rows: 15rem;
+    }
+    
+    .dog-categories > div {
+        background-position: center;
+        height: 100%;
+        overflow: visible;
+        justify-content: flex-start;
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .dog-categories > div > a {
+        font-size: 2rem;
+    }
+
+    div.food {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .dog-categories > div > p {
+        display: initial;
+    }
+
+    .food > a, .food > p {
+        color: black;
+    }
+
+    .food {
+        padding-left: 1rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: white;
+    }
+
+    .featured-goods {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .goods-card {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 40rem;
+    }
+
+    .card-image {
+        flex-basis: 60%;
+    }
+    
+    .card-title {
+        flex-basis: 20%;
+    }
+    
+    .card-text {
+        flex-basis: 10%;
+    }
+    
+    .card-buy-button {
+        flex-basis: 10%;
+    }
+    
+    .goods-card {
+        border: white;
+        transition: 0.5s;
+    }
+    
+    .goods-card:hover {
+        border: grey;
+        box-shadow: 0 0 20px grey;
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "main main main main"
+                             "info cust extr acc";
+    }
+    
+    .main-contact {
+        grid-area: main;
+    }
+
+    .tel {
+        font-size: 3rem !important;
+    }
+    
+    .working-hours {
+        font-size: 2rem !important;
+    }
+    
+    .information {
+        grid-area: info;
+    }
+    
+    .customer-service {
+        grid-area: cust;
+    }
+    
+    .extras {
+        grid-area: extr;
+    }
+    
+    .account {
+        grid-area: acc;
+    }
+    
+    .food, .toys, .clothes {
+        transition: 0.2s;
+    }
+    
+    .food:hover, .toys:hover, .clothes:hover {
+        font-size: 2.2rem;
+        text-shadow: 1px 1px 5px red;
+    }
+
+    footer {
+        font-size: 1.5rem !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
